@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails', '~> 5.1.4'
+
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'aws-sdk', '~> 2.5'
 gem 'coffee-rails', '~> 4.2'
@@ -9,9 +11,9 @@ gem 'pg', '~> 0.21'
 gem 'power-types'
 gem 'puma', '~> 3.7'
 gem 'rack-cors', '~> 0.4.0'
-gem 'rails', '~> 5.1.4'
 gem 'rails-i18n'
 gem 'responders'
+gem 'rulp', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'spring'

@@ -222,6 +222,7 @@ GEM
       builder (< 4)
       rspec-core (>= 2, < 4, != 2.12.0)
     ruby_dep (1.5.0)
+    rulp (0.0.44)
     sass (3.5.5)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -304,6 +305,7 @@ DEPENDENCIES
   rspec-nc
   rspec-rails
   rspec_junit_formatter (= 0.2.2)
+  rulp
   sass-rails (~> 5.0)
   shoulda-matchers
   simple_token_authentication (~> 1.0)

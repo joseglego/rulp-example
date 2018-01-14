@@ -37,23 +37,24 @@
           <%= label_tag(:const2, "Constraint 2:") %><br/>
           <%= text_field_tag(:const2, @const2) %>
         </div>
-        <%= submit_tag("Calculate") %>
+        <%= submit_tag("Regular Request") %>
       <% end %>
+      <button id="button">Async Request</button>
     </div>
     <div class="section">
       <h2>Results</h2>
-      Max: 10 * X_i + 6 * Y_i + 4 * Z_i = <b class="important"><%= @result[:solution] %></b>
+      Max: 10 * X_i + 6 * Y_i + 4 * Z_i = <b id="result" class="important"><%= @result[:solution] %></b>
       
       <ul>
-        <li><b>0:</b> X_i +     Y_i +     Z_i <= <b class="important"><%= @const0 %></b></li>
-        <li><b>1:</b> 10 * X_i + 4 * Y_i + 5 * Z_i <= <b class="important"><%= @const1 %></b></li>
-        <li><b>2:</b> 2 *  X_i + 2 * Y_i + 6 * Z_i <= <b class="important"><%= @const2 %></b></li>
+        <li><b>0:</b> X_i +     Y_i +     Z_i <= <b id="result-const0"class="important"><%= @const0 %></b></li>
+        <li><b>1:</b> 10 * X_i + 4 * Y_i + 5 * Z_i <= <b id="result-const1" class="important"><%= @const1 %></b></li>
+        <li><b>2:</b> 2 *  X_i + 2 * Y_i + 6 * Z_i <= <b id="result-const2" class="important"><%= @const2 %></b></li>
       </ul>
 
       Variables<br/>
-      X = <b class="important"><%= @result[:x] %></b><br/>
-      Y = <b class="important"><%= @result[:y] %></b><br/>
-      Z = <b class="important"><%= @result[:z] %></b><br/>
+      X = <b id="variable-x" class="important"><%= @result[:x] %></b><br/>
+      Y = <b id="variable-y" class="important"><%= @result[:y] %></b><br/>
+      Z = <b id="variable-z" class="important"><%= @result[:z] %></b><br/>
     </div>
   </div>
 </div>

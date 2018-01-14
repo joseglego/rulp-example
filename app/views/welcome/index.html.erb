@@ -1,0 +1,59 @@
+<div class="page">
+  <h1>Rulp-Exmaple</h1>
+  <div class="container">
+    <div class="section">
+      <h2>Definition Of Problem</h2>
+      <p>
+        <b>Max: 10 * X_i + 6 * Y_i + 4 * Z_i</b>
+      </p>
+
+      <p>
+        With<br/>
+        X_i >= 0<br/>
+        Y_i >= 0<br/>
+        Z_i >= 0
+      </p>
+
+      <p>
+        Constraints:
+      </p>
+      <ul>
+        <li><b>0:</b> X_i +     Y_i +     Z_i <= <b>const0</b> </li>
+        <li><b>1:</b> 10 * X_i + 4 * Y_i + 5 * Z_i <= <b>const1</b> </li>
+        <li><b>2:</b> 2 *  X_i + 2 * Y_i + 6 * Z_i <= <b>const2</b> </li>
+      </ul>
+
+      <h2>Constraints</h2>
+      <%= form_tag("/", method: "get") do |form| %>
+        <div class="">
+          <%= label_tag(:const0, "Contraint 0:") %><br/>
+          <%= text_field_tag(:const0, @const0) %>
+        </div>
+        <div class="">
+          <%= label_tag(:const1, "Constraint 1:") %><br/>
+          <%= text_field_tag(:const1, @const1) %>
+        </div>
+        <div class="">
+          <%= label_tag(:const2, "Constraint 2:") %><br/>
+          <%= text_field_tag(:const2, @const2) %>
+        </div>
+        <%= submit_tag("Calculate") %>
+      <% end %>
+    </div>
+    <div class="section">
+      <h2>Results</h2>
+      Max: 10 * X_i + 6 * Y_i + 4 * Z_i = <b class="important"><%= @result[:solution] %></b>
+      
+      <ul>
+        <li><b>0:</b> X_i +     Y_i +     Z_i <= <b class="important"><%= @const0 %></b></li>
+        <li><b>1:</b> 10 * X_i + 4 * Y_i + 5 * Z_i <= <b class="important"><%= @const1 %></b></li>
+        <li><b>2:</b> 2 *  X_i + 2 * Y_i + 6 * Z_i <= <b class="important"><%= @const2 %></b></li>
+      </ul>
+
+      Variables<br/>
+      X = <b class="important"><%= @result[:x] %></b><br/>
+      Y = <b class="important"><%= @result[:y] %></b><br/>
+      Z = <b class="important"><%= @result[:z] %></b><br/>
+    </div>
+  </div>
+</div>

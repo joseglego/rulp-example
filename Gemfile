@@ -13,7 +13,7 @@ gem 'puma', '~> 3.7'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails-i18n'
 gem 'responders'
-gem 'rulp', require: false
+gem 'rulp', git: 'https://github.com/platanus/rulp.git', branch: 'feat/customSuffix', require: false
 gem 'sass-rails', '~> 5.0'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'spring'
